@@ -3,6 +3,17 @@
 <footer role="contentinfo" class="contentinfo">
 <hr>
 	<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo"><?php bloginfo( 'name' ); ?></a> &copy;<?php echo date("Y"); ?> <a href="#top" title="Jump back to top">&#8593;</a></p>
+  <nav role="navigation" class="nav__secondary">
+      <?php
+          $args = array(
+              'theme_location' => 'nav__secondary',
+              'container' => 'false',
+              'items_wrap' => '<ul>%3$s</ul>',
+              );
+          wp_nav_menu($args);
+      ?>
+  </nav>
+  <img src="<?php echo bloginfo('template_directory'); ?>/assets/images/logo.png" class="logo-image" />
 </footer>
 
 <?php wp_footer(); ?>

@@ -52,6 +52,7 @@
         <nav role="navigation" class="nav__primary">
             <?php
                 $args = array(
+                	'theme_location' => 'nav__primary',
                     'container' => 'false',
                     'items_wrap' => '<ul>%3$s</ul>',
                     );

@@ -288,7 +288,7 @@ footer p {
 img.logo-image {
   height: 60px;
   display: inline-block;
-  margin: 5px 0px 0px 20px; }
+  margin: 20px; }
 
 .older-newer {
   text-align: center; }
@@ -564,11 +564,18 @@ header .nav__primary a:hover {
   transition: ease 2s; }
 
 @media (max-width: 900px) {
+  .splash__title__container {
+    position: absolute;
+    top: 5px; }
+
   .splash__title h1 {
-    font-size: 60px;
-    line-height: 70px;
-    font-size: 6rem;
-    line-height: 7rem; } }
+    font-size: 40px;
+    line-height: 45px;
+    font-size: 4rem;
+    line-height: 4.5rem; } }
+nav ul {
+  margin: 0; }
+
 .nav__primary {
   position: absolute;
   right: 0;

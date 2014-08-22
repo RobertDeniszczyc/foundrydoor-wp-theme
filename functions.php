@@ -90,4 +90,11 @@ function current_to_active($text){
         }
 add_filter ('wp_nav_menu','current_to_active');
 
+
+if (function_exists('register_nav_menu'))
+{
+    register_nav_menu('nav__primary', 'Primary Nav');
+    register_nav_menu('nav__secondary', 'Secondary Nav');
+}
+
 ?>
