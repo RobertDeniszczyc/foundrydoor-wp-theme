@@ -4,4 +4,603 @@ Description: A Sass build of the Barebones WordPress base theme.
 Author: James Young (@welcomebrand)
 Author URI: http://welcomebrand.co.uk;
 Version: 1.0
-*/html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,dialog,figure,footer,header,hgroup,menu,nav,section,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent}article,aside,dialog,figure,footer,header,hgroup,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}a{margin:0;padding:0;border:0;vertical-align:baseline;background:transparent}ins,mark{background:#333;color:#fff;text-decoration:none}mark{display:inline-block;padding:.1em;text-shadow:none;background:#f2d3a9;color:#a93901;border-radius:2px}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted #000;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}::-moz-selection,::-webkit-selection,::selection{text-shadow:none;background:#333;color:#fff}.cf:before,.cf:after{content:"";display:table}.cf:after{clear:both}.cf{zoom:1}[type=submit]{cursor:pointer}*{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-text-size-adjust:none;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}html{font-size:100%}body{font-size:16px;line-height:24px;font-size:1rem;line-height:1.5rem}h1,h2,h3,h4,h5,h6{font-size:24px;line-height:28px;font-size:1.5rem;line-height:1.75rem}a{-webkit-transition:all 0.3s ease 0s;-moz-transition:all 0.3s ease 0s;transition:all 0.3s ease 0s}a:hover,a:active{outline:0}a:focus{outline:thin dotted}strong,b{font-weight:bold}.small{font-size:12px;line-height:20px;font-size:0.75rem;line-height:1.25rem}pre,code{font-family:Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;*overflow:visible}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top;resize:vertical}body{padding:0;margin:0 auto;width:100%}ul,ol{margin:0 0 1.5em 1.5em}li>ul,li>ol{margin-bottom:0}img,a img{-ms-interpolation-mode:bicubic;max-width:100%;min-height:auto;vertical-align:middle}
+*/
+/*
+
+    GLOBAL RESETS
+    =============
+
+    Standard reset styles and a few extra bits and pieces including
+    setting border-box on all elements.
+
+*/
+@import url("http://fonts.googleapis.com/css?family=Oswald");
+@import url("http://fonts.googleapis.com/css?family=Tinos:400,700");
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent; }
+
+article, aside, dialog, figure, footer, header, hgroup, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  background: transparent; }
+
+ins, mark {
+  background: #333;
+  color: #fff;
+  text-decoration: none; }
+
+mark {
+  display: inline-block;
+  padding: .1em;
+  text-shadow: none;
+  background: #f2d3a9;
+  color: #a93901;
+  border-radius: 2px; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+::-moz-selection, ::-webkit-selection, ::selection {
+  text-shadow: none;
+  background: #333;
+  color: #fff; }
+
+.cf:before, .cf:after {
+  content: "";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.cf {
+  zoom: 1; }
+
+[type=submit] {
+  cursor: pointer; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+/*
+
+    MIXINS AND VARIABLES
+    ====================
+
+    All mixins and variables live here. Where possible, please include
+    a source link if they're written by someone else along with an
+    indication of how they should be used in the css files.
+
+*/
+/* font weights */
+/* typefaces */
+/* Colour Palette */
+/* REM Font sizing - http://blog.divshot.com/post/29552945105/useful-sass-mixins-for-responsive-design-font-sizing */
+/* Define Media Queries - http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/ */
+/* Hover animation */
+/* Gradient */
+/* Clearfix http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/ */
+/* Visually hide element http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/ */
+/* Image floats */
+/*
+	NOTE: If you use Google fonts, import it here. Don't include the http bit then it's safe across secure too
+	@import url(//fonts.googleapis.com/css?family=Paytone+One;
+*/
+/*
+Font weights set as variables because sometimes there are multiple weights,
+so an example use might also be a variable of $mid-weight: 500;
+If you've just got normal and bold, you don't need the variable.
+*/
+html {
+  font-size: 10px;
+  font-family: serif; }
+
+body {
+  font-size: 10px;
+  line-height: 15px;
+  font-size: 1rem;
+  line-height: 1.5rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", sans-serif;
+  color: #222222; }
+
+p, a {
+  color: #222222; }
+
+h1 {
+  font-size: 60px;
+  line-height: 70px;
+  font-size: 6rem;
+  line-height: 7rem;
+  margin: 4rem 0rem 0.5rem; }
+
+h2 {
+  font-size: 40px;
+  line-height: 50px;
+  font-size: 4rem;
+  line-height: 5rem;
+  margin: 3.5rem 0rem 0.5rem; }
+
+h3 {
+  font-size: 30px;
+  line-height: 45px;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  margin: 3rem 0rem 0.5rem; }
+
+h4 {
+  font-size: 25px;
+  line-height: 40px;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  margin: 1.4rem 0rem; }
+
+h5 {
+  font-size: 23px;
+  line-height: 36px;
+  font-size: 2.3rem;
+  line-height: 3.6rem;
+  margin: 1.4rem 0rem; }
+
+h6 {
+  font-size: 22px;
+  line-height: 34px;
+  font-size: 2.2rem;
+  line-height: 3.4rem;
+  margin: 1.4rem 0rem; }
+
+p, .single-page > ul li, ul li {
+  font-size: 20px;
+  line-height: 30px;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-family: "Tinos", serif;
+  margin: 1rem 0rem 0.5rem; }
+
+.nocomments {
+  color: #777777; }
+
+.nav__primary *, .logo {
+  font-weight: 400;
+  text-decoration: none; }
+
+a *, .nav__primary a, p > a, a {
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s; }
+  a *:hover, a *:active, .nav__primary a:hover, .nav__primary a:active, p > a:hover, p > a:active, a:hover, a:active {
+    outline: 0;
+    color: #f0223a; }
+
+a:focus {
+  outline: thin dotted; }
+
+strong, b {
+  font-weight: bold; }
+
+.small {
+  font-size: 7.5px;
+  line-height: 12.5px;
+  font-size: 0.75rem;
+  line-height: 1.25rem; }
+
+pre, code {
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal; }
+
+.desc {
+  color: #777777; }
+
+header h1 {
+  font-family: "Tinos", serif;
+  font-size: 20px;
+  line-height: 27.5px;
+  font-size: 2rem;
+  line-height: 2.75rem;
+  margin: 0.5em 2em; }
+header p, header a {
+  font-size: 20px;
+  line-height: 20px;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 700; }
+header .desc {
+  font-weight: 400; }
+
+.guest-name {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center; }
+  .guest-name h1 {
+    font-size: 120px;
+    line-height: 130px;
+    font-size: 12rem;
+    line-height: 13rem;
+    margin: 3rem auto 3rem; }
+
+blockquote p {
+  font-size: 30px;
+  line-height: 40px;
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 700; }
+
+.contentinfo {
+  text-align: center; }
+
+footer p {
+  margin: 0; }
+
+::selection {
+  background-color: rgba(50, 50, 50, 0.4); }
+
+/* media queries */
+@media (max-width: 960px) {
+  .guest-name h1 {
+    font-size: 50px;
+    line-height: 60px;
+    font-size: 5rem;
+    line-height: 6rem;
+    margin: 2.5rem auto 2rem; } }
+@media (max-width: 480px) {
+  h1.logo-text {
+    display: none; } }
+img.logo-image {
+  height: 60px;
+  display: inline-block;
+  margin: 5px 0px 0px 20px; }
+
+.older-newer {
+  text-align: center; }
+  .older-newer li {
+    display: inline-block; }
+
+/* Glyph, by Harry Roberts */
+hr {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.75), transparent);
+  background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, 0.75), transparent);
+  background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, 0.75), transparent);
+  background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, 0.75), transparent); }
+
+hr.invert {
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+  background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0)); }
+
+/*
+
+    GENEAL FORM STUFF
+    =================
+
+    This is more reset based stuff, if you've got a specific form, it would be
+    best to create it as a partial scss file and import it to screen.scss
+
+*/
+form {
+  margin: 0; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px; }
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+button,
+input {
+  line-height: normal; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible; }
+
+button[disabled],
+input[disabled] {
+  cursor: default; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical; }
+
+/*
+
+    SITEWIDE LAYOUT ELEMENTS
+    ========================
+
+    Top level layout elements go in here, if you're building a module or page
+    element of some sort, split it out into its own scss file and update
+    styles.scss to import it.
+
+*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  min-height: 100%; }
+
+body {
+  padding: 0;
+  margin: 0 auto;
+  width: 100%; }
+
+ul, ol {
+  margin: 0 0 1.5em 1.5em;
+  list-style-position: inside; }
+
+li {
+  margin: 0em 0.5em; }
+  li > ul,
+  li > ol {
+    margin-bottom: 0; }
+
+img,
+a img {
+  -ms-interpolation-mode: bicubic;
+  max-width: 100%;
+  min-height: auto;
+  vertical-align: middle; }
+
+/* Page styling */
+.single-page {
+  max-width: 750px;
+  margin: 60px auto 0;
+  overflow: hidden; }
+
+/* footer */
+footer, .comments {
+  max-width: 650px;
+  min-height: 70px;
+  margin: 0 auto 0; }
+
+@media (max-width: 600px) {
+  img.logo-image {
+    height: 40px; }
+
+  .nav__primary .menu li {
+    min-width: 70px; } }
+/* Article styling */
+article {
+  padding: 0; }
+
+.guest-content {
+  margin: 60px auto 1em; }
+  .guest-content blockquote {
+    max-width: 650px;
+    margin: 0 auto 0;
+    padding: 3em 5em 3em; }
+  .guest-content img {
+    width: auto;
+    height: auto; }
+
+.article__content {
+  max-width: 650px;
+  margin: 6em auto 0em;
+  overflow: hidden;
+  padding: 0 1em; }
+
+.primary-content {
+  margin: 0 auto 0;
+  overflow: hidden; }
+
+.entry-meta {
+  margin: 1em auto; }
+
+.article-archive {
+  max-width: 1000px;
+  margin: 0 auto 0; }
+
+.article-preview {
+  max-width: 650px; }
+  .article-preview .entry-meta {
+    text-align: center; }
+  .article-preview p {
+    margin: 0.5em auto; }
+
+@media (max-width: 900px) {
+  .article__content {
+    margin: 3em auto 0em; } }
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  min-height: 60px;
+  padding: 1em;
+  background: #222222;
+  color: rgba(250, 250, 250, 0.7);
+  z-index: 999; }
+
+header nav ul {
+  margin: 0;
+  color: rgba(250, 250, 250, 0.7); }
+header .nav__primary a, header .nav__primary a:visited {
+  color: rgba(250, 250, 250, 0.7); }
+header .nav__primary a:hover {
+  color: #f0223a; }
+
+.banner-text {
+  display: inline-block; }
+  .banner-text a, .banner-text a:visited {
+    color: rgba(250, 250, 250, 0.7);
+    text-decoration: none; }
+
+.splash {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  max-height: 900px;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background: #333; }
+  .splash .splash__image {
+    max-width: 100%;
+    overflow: hidden;
+    opacity: 0.7; }
+
+.splash__title {
+  width: 100%;
+  text-align: center;
+  display: block;
+  z-index: 999;
+  position: absolute;
+  top: 5%;
+  padding: 0.25em;
+  margin: 0;
+  transition: ease 1s; }
+  .splash__title h1 {
+    font-size: 90px;
+    line-height: 100px;
+    font-size: 9rem;
+    line-height: 10rem;
+    color: white; }
+  .splash__title p {
+    margin: 0.25em;
+    color: white; }
+
+.splash__title--invisible {
+  opacity: 0;
+  transition: ease 1s; }
+
+.splash__title__container {
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 60px; }
+
+.splash--backgroundclr {
+  background: none;
+  transition: ease 2s; }
+
+.splash__image--clr {
+  opacity: 1 !important;
+  transition: ease 2s; }
+
+@media (max-width: 900px) {
+  .splash__title h1 {
+    font-size: 60px;
+    line-height: 70px;
+    font-size: 6rem;
+    line-height: 7rem; } }
+.nav__primary {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  margin: 0.5em 2em; }
+  .nav__primary li {
+    display: inline-block;
+    margin: 0 0.75em; }
+
+.sitetitle {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  margin: 0.5em 2em; }
+  .sitetitle li {
+    display: inline-block; }
+
+@media (max-width: 900px) {
+  .nav__primary li {
+    margin: 0 0.4em; } }
+.ul--archive {
+  margin: 0; }
+  .ul--archive li {
+    list-style: none;
+    text-align: center; }
+    .ul--archive li h1 {
+      margin: 1em 0em 0em; }
+    .ul--archive li p {
+      margin: 0em 0em 1em; }
+    .ul--archive li a {
+      text-decoration: none; }
+
+.entry-meta p {
+  font-style: italic;
+  color: #777777; }

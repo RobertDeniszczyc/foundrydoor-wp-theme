@@ -1,0 +1,55 @@
+/*
+
+    SITEWIDE LAYOUT ELEMENTS
+    ========================
+
+    Top level layout elements go in here, if you're building a module or page
+    element of some sort, split it out into its own scss file and update
+    styles.scss to import it.
+
+*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body {
+    min-height: 100%;
+}
+body {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    }
+
+ul, ol {
+    margin: 0 0 1.5em 1.5em;
+    list-style-position: inside;
+    }
+
+li {
+    margin: 0em 0.5em;
+    > ul,
+    > ol {
+         margin-bottom:0;
+         }
+    }
+
+img,
+a img {
+    -ms-interpolation-mode: bicubic;
+    max-width: 100%;
+    min-height: auto;
+    vertical-align: middle;
+    }
+
+figure, img {
+
+    }
+
+figure {
+
+    figcaption {
+
+        }
+}

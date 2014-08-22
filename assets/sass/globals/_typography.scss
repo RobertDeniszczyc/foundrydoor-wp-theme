@@ -8,11 +8,12 @@ Font weights set as variables because sometimes there are multiple weights,
 so an example use might also be a variable of $mid-weight: 500;
 If you've just got normal and bold, you don't need the variable.
 */
-$normal: normal;
-$bold: bold;
+@import url('http://fonts.googleapis.com/css?family=Oswald');
+@import url('http://fonts.googleapis.com/css?family=Tinos:400,700');
 
 html {
-    font-size: 100%;
+    font-size: 10px;
+    font-family: serif;
     }
 
 body {
@@ -20,25 +21,55 @@ body {
 	}
 
 h1, h2, h3, h4, h5, h6 {
-	@include font-size(1.5, 1.75);
-	}
-
-    h2 {}
-    h3 {}
-    h4 {}
-    h5 {}
-    h6 {}
-
-p {
-
-	}
-
-a {
+    font-family: $sans-serif;
+    color: $dark-gray;
+}
+p, a {
+    color: $dark-gray;
+}
+h1 {
+    @include font-size(6, 7);
+    margin: 4rem 0rem 0.5rem;
+}
+h2 {
+    @include font-size(4, 5);
+    margin: 3.5rem 0rem 0.5rem;
+}
+h3 {
+    @include font-size(3, 4.5);
+    margin: 3rem 0rem 0.5rem;
+}
+h4 {
+    @include font-size(2.5, 4);
+    margin: 1.4rem 0rem;
+}
+h5 {
+    @include font-size(2.3, 3.6);
+    margin: 1.4rem 0rem;
+}
+h6 {
+    @include font-size(2.2, 3.4);
+    margin: 1.4rem 0rem;
+}
+p, .single-page > ul li, ul li {
+    @include font-size(2, 3);
+    font-family: $serif;
+    margin: 1rem 0rem 0.5rem;
+}
+.nocomments {
+    color: $light-gray;
+}
+.nav__primary *, .logo {
+    font-weight: 400;
+    text-decoration: none;
+}
+a *, .nav__primary a, p > a, a {
 	@include hover-fade;
 
 	&:hover,
     &:active {
         outline: 0;
+        color: $primaryhover;
 		}
 	}
 
@@ -58,9 +89,59 @@ pre, code {
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
 	}
 
-blockquote {
-
-    cite {
-
-        }
+.desc {
+    color: $light-gray;
+}
+header {
+    h1 {
+        font-family: $serif;
+        @include font-size(2, 2.75);
+        margin: 0.5em 2em;
     }
+    p, a {
+        @include font-size(2, 2);
+        font-weight: $heavy;
+    }
+    .desc {
+        font-weight: $light;
+    }
+}
+.guest-name {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    h1 {
+        @include font-size(12, 13);
+        margin: 3rem auto 3rem;
+    }
+}
+blockquote{
+    p {
+        @include font-size(3, 4);
+        font-weight: $heavy;
+    }
+}
+.contentinfo {
+    text-align: center;
+}
+footer p {
+    margin: 0;
+}
+::selection {
+    background-color: rgba(50,50,50,0.4);
+}
+
+/* media queries */
+@media (max-width: 960px) {
+.guest-name {
+    h1 {
+        @include font-size(5, 6);
+        margin: 2.5rem auto 2rem;
+    }
+}
+}
+@media (max-width: 480px) {
+    h1.logo-text {
+        display: none;
+    }
+}

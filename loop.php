@@ -17,7 +17,6 @@
         <?php elseif ( is_year() ) : ?><?php printf( __( '<span>Yearly Archive</span> %s' ), get_the_date('Y') ); ?>
         <?php elseif ( is_category() ) : ?><?php echo single_cat_title(); ?>
         <?php elseif ( is_search() ) : ?><?php printf( __( 'Search Results for: %s' ), '<span>' . get_search_query() . '</span>' ); ?>
-        <?php elseif ( is_home() ) : ?>Latest Posts<?php else : ?>
         <?php endif; ?>
     </h1>
 
@@ -27,12 +26,17 @@
         <article class="article-archive <?php echo $firstClass; ?>" id="post-<?php the_ID(); ?>">
 			<?php $firstClass = ""; ?>
 			<?php ?>
-                <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( '%s' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
-                	<h2><?php the_title(); ?></h2>
-                </a>
-                <?php the_excerpt(); ?>
-                <p class="entry-meta"><time datetime="<?php the_time('l, F jS, Y') ?>" pubdate><?php the_time('l jS F Y') ?></time></p>
-		</article>
+            <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( '%s' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"  class="guest-name">
+                	<h1><?php the_title(); ?></h1>
+            </a>
+           
+            
+            <div class="guest-content article-preview">
+                 <p class="entry-meta"><time datetime="<?php the_time('l, F jS, Y') ?>" pubdate><?php the_time('l jS F Y') ?></time></p>
+                <?php the_content(); ?>
+            </div>
+           
+        </article>
 
 		<?php comments_template( '', true ); ?>
 
@@ -40,7 +44,7 @@
 
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
-    <ul class="navigation">
+    <ul class="navigation older-newer">
         <li class="older">
             <?php next_posts_link( __( '&larr; Older posts' ) ); ?>
         </li>

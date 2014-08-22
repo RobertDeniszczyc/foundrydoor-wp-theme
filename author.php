@@ -11,21 +11,20 @@
                             <p>by <?php the_field('post_author'); ?> </p>
                             <p>Published on <time datetime="<?php the_time('l, F jS, Y') ?>" pubdate><?php the_time('l, F jS, Y') ?></time></p>
                             <hr class="invert">
-                            <p>&#9660;</p>
                         </div>
                     </div>
                     <img class="splash__image" src="<?php the_field('splash_image'); ?>" alt=""/>
                 </div>  
                 <div class="article__content">
                     <?php the_content(); ?>
-                    <br />
+                    <hr>
                 </div>
             </div>
                 
                 <?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:' ), 'after' => '</div>' ) ); ?>
 
             <footer class="entry-meta">
-                <p>Words by <?php the_field('post_author'); ?></p>
+                <p>Words by <?php the_author_meta( user_firstname ); echo " "; the_author_meta( user_lastname) ?> </p>
             	<p>Published on <time datetime="<?php the_time('l, F jS, Y') ?>" pubdate><?php the_time('l, F jS, Y') ?></time> &middot; <a href="<?php the_permalink(); ?>">Permalink</a></p>
             </footer>
 

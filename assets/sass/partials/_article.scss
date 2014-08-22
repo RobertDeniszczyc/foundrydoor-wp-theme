@@ -1,0 +1,49 @@
+/* Article styling */
+
+article {
+    padding: 0;
+} 
+.guest-content {
+    margin: 60px auto 1em;
+    blockquote {
+        max-width: 650px;
+        margin: 0 auto 0;
+        padding: 3em 5em 3em;
+    } 
+    img {
+        width: auto;
+        height: auto;
+    }
+}
+.article__content {
+    max-width: 650px;
+    margin: 6em auto 0em;
+    overflow: hidden;
+    padding: 0 1em;
+}
+.primary-content {
+    margin: 0 auto 0;
+    overflow: hidden;
+}
+.entry-meta {
+    margin: 1em auto;
+}
+.article-archive {
+    max-width: 1000px;
+    margin: 0 auto 0;
+}
+.article-preview {
+    max-width: 650px;
+    .entry-meta {
+        text-align: center;
+    }
+    p {
+        margin: 0.5em auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .article__content {
+        margin: 3em auto 0em;
+    }
+}

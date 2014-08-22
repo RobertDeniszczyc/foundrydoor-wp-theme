@@ -9,16 +9,28 @@
 
 */
 
+/* font weights */
+$normal: normal;
+$bold: bold;
+$light: 400;
+$heavy: 700;
 
+/* typefaces */
+$sans-serif: 'Oswald', sans-serif;
+$serif: 'Tinos', serif;
 
 /* Colour Palette */
 $white: #fff;
+$ghost: rgba(250, 250, 250, 0.7);
+$dark-gray: #222;
+$light-gray: #777;
+$primaryhover: #F0223A;
 
 /* REM Font sizing - http://blog.divshot.com/post/29552945105/useful-sass-mixins-for-responsive-design-font-sizing */
 // Use: @include font-size(1,1.5);
 @mixin font-size($size: 1, $line: $size * 1.5) {
-	font-size     : ($size * 16) + px;
-	line-height   : ($line * 16) + px;
+	font-size     : ($size * 10) + px;
+	line-height   : ($line * 10) + px;
 	font-size     : $size + rem;
 	line-height   : $line + rem;
 	}
@@ -114,3 +126,4 @@ $white: #fff;
         display: inline;
         }
     }
+    

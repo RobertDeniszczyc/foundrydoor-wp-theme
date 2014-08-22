@@ -1,3 +1,27 @@
 // This is where you can put any styles specific to a page
 // .page is the class WordPress outputs to the body tag
 .page {}
+
+/* Page styling */
+.single-page {
+    max-width: 750px;
+    margin: 60px auto 0;
+    overflow: hidden;
+}
+
+/* footer */
+footer, .comments {
+    max-width: 650px;
+    min-height: 70px;
+    margin:0 auto 0;
+}
+@media (max-width: 600px) {
+    img.logo-image {
+        height: 40px;
+    }
+    .nav__primary {
+    .menu li {
+        min-width: 70px;
+        }
+    }  
+}

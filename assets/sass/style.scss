@@ -9,13 +9,20 @@ Version: 1.0
 @import
 	// "globals/debug",
 
-	"globals/reset",
-	"globals/settings",
-	"globals/typography",
+    "globals/reset",
+    "globals/settings",
+    "globals/typography",
     "globals/misc",
     "globals/forms",
+    "globals/project",
 
     "pages/single",
     "pages/page",
 
-    "partials/layout";
+    "partials/layout",
+    "partials/article",
+    "partials/header",
+    "partials/splash",
+    "partials/nav",
+    "partials/lists",
+    "partials/footer";

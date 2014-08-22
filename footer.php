@@ -1,7 +1,8 @@
 <?php get_sidebar(); ?>
 
-<footer role="contentinfo">
-	<p>&copy;<?php echo date("Y"); ?> <a href="#top" title="Jump back to top">&#8593;</a></p>
+<footer role="contentinfo" class="contentinfo">
+<hr>
+	<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo"><?php bloginfo( 'name' ); ?></a> &copy;<?php echo date("Y"); ?> <a href="#top" title="Jump back to top">&#8593;</a></p>
 </footer>
 
 <?php wp_footer(); ?>
@@ -13,11 +14,20 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script>!window.jQuery && document.write(unescape('%3Cscript src="<?php echo bloginfo('template_directory'); ?>/assets/scripts/jquery-2.0.3.min.js"%3E%3C/script%3E'))</script>
 
-    <!--
-    General.js is a file for storing sitewide bits and pieces of Javascript,
-    if you don't need it, simply delete it.
+
     <script src="<?php echo bloginfo('template_directory'); ?>/assets/scripts/general.js"></script>
-    -->
+
+    <!-- Google Analytics Tracking script !-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42804068-1', 'foundrydoor.com');
+  ga('send', 'pageview');
+
+</script>
 
 <!-- Scripts -->
 

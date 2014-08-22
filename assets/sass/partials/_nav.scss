@@ -1,0 +1,25 @@
+.nav__primary {
+	position: absolute;
+	right: 0;
+    display: inline-block;
+    margin: 0.5em 2em;
+    li {
+        display: inline-block;
+        margin: 0 0.75em;
+    }
+}
+.sitetitle {
+	position: absolute;
+	left: 0;
+	display: inline-block;
+	margin: 0.5em 2em;
+	li {
+	    display: inline-block;
+	}
+}
+
+@media (max-width: 900px) {
+	.nav__primary li {
+		margin: 0 0.4em;
+	}
+}

@@ -26,7 +26,7 @@
 <!-- The little things -->
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-    <link rel="shortcut icon" href="<?php echo bloginfo('template_directory'); ?>/favicon.png">
+    <link rel="shortcut icon" href="<?php echo bloginfo('template_directory'); ?>/favicon.ico">
 	<link rel="apple-touch-icon" href="<?php echo bloginfo('template_directory'); ?>/apple-touch-icon-precomposed.png"/>
 <!-- The little things -->
 
@@ -43,11 +43,13 @@
 
 <body <?php body_class(); ?> id="top">
     <header role="banner">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo"><?php bloginfo( 'name' ); ?></a>
-        <p class="desc">
-			<?php bloginfo( 'description' ); ?>
-        </p>
-        <nav role="navigation">
+        <div class="banner-text sitetitle">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></a>
+            <!--<p class="desc">
+                            <?php bloginfo( 'description' ); ?>
+            </p>!-->
+        </div>
+        <nav role="navigation" class="nav__primary">
             <?php
                 $args = array(
                     'container' => 'false',
@@ -56,5 +58,4 @@
                 wp_nav_menu($args);
             ?>
         </nav>
-        <?php get_search_form(); ?>
     </header>
