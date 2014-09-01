@@ -2,7 +2,8 @@
 
 <footer role="contentinfo" class="contentinfo">
 <hr>
-	<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo"><?php bloginfo( 'name' ); ?></a> &copy;<?php echo date("Y"); ?> <a href="#top" title="Jump back to top">&#8593;</a></p>
+	
+  <p class="light">A little project <a class="light" href="http://builtbyrobert.com">Built By Robert</a></p>
   <nav role="navigation" class="nav__secondary">
       <?php
           $args = array(
@@ -14,6 +15,8 @@
       ?>
   </nav>
   <img src="<?php echo bloginfo('template_directory'); ?>/assets/images/logo.png" class="logo-image" />
+  <p class="light"><sub>All work is intellectual property of rightful and noted owners</sub></p>
+  <p><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo"><?php bloginfo( 'name' ); ?></a> <?php echo date("Y"); ?>&copy;</p>
 </footer>
 
 <?php wp_footer(); ?>
