@@ -481,6 +481,24 @@ article {
   .article-preview p {
     margin: 0.5em auto; }
 
+.article__title {
+  width: 100%;
+  text-align: center;
+  display: block;
+  position: relative;
+  top: 5%;
+  padding: 0.25em;
+  margin: 0; }
+  .article__title h1 {
+    font-size: 90px;
+    line-height: 100px;
+    font-size: 9rem;
+    line-height: 10rem;
+    color: #222222; }
+  .article__title p {
+    margin: 0.25em;
+    color: #222222; }
+
 @media (max-width: 900px) {
   .article__content {
     margin: 3em auto 0em; } }

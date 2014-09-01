@@ -42,6 +42,24 @@ article {
     }
 }
 
+.article__title {
+    width: 100%;
+    text-align: center;
+    display: block;
+    position: relative;
+    top: 5%;
+    padding: 0.25em;
+    margin: 0;
+    h1 {
+        @include font-size(9, 10);
+        color: $dark-gray;
+    }
+    p {
+        margin: 0.25em;
+        color: $dark-gray;
+    }
+}
+
 @media (max-width: 900px) {
     .article__content {
         margin: 3em auto 0em;
