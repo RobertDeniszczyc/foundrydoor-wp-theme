@@ -12,7 +12,7 @@
                    <div class="splash__title__container">
                         <div class="splash__title">
                             <h1><?php echo get_the_title(); ?></h1>
-                            <p>by <?php the_field('post_author'); ?> </p>
+                            <p><?php the_field('post_type'); ?> by <?php the_field('post_author'); ?> </p>
                             <p>Published on <time datetime="<?php the_time('l, F jS, Y') ?>" pubdate><?php the_time('l, F jS, Y') ?></time></p>
                             <hr class="invert">
                             <p>&#9660;</p>
@@ -23,7 +23,7 @@
                 <?php } else { ?>
                     <div class="article__title">
                         <h1><?php echo get_the_title(); ?></h1>
-                        <p>by <?php the_field('post_author'); ?> </p>
+                        <p><?php the_field('post_type'); ?> by <?php the_field('post_author'); ?> </p>
                         <p>Published on <time datetime="<?php the_time('l, F jS, Y') ?>" pubdate><?php the_time('l, F jS, Y') ?></time></p>
                         <hr>
                     </div>
@@ -39,7 +39,7 @@
                 <?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:' ), 'after' => '</div>' ) ); ?>
 
             <footer class="entry-meta">
-                <p>Words by <?php the_field('post_author'); ?></p>
+                <p><?php the_field('post_type'); ?> by <?php the_field('post_author'); ?> </p>
             	<p>Published on <time datetime="<?php the_time('l, F jS, Y') ?>" pubdate><?php the_time('l, F jS, Y') ?></time> &middot; <a href="<?php the_permalink(); ?>">Permalink</a></p>
             </footer>
 
