@@ -41,6 +41,9 @@ if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts
 
             <footer class="entry-meta">
                 <p><?php the_field('post_type'); ?> by <?php the_field('post_author'); ?> </p>
+                <?php if ($splash_image!='') { ?>
+                    <p>Splash image credit: <?php the_field('splash_credit'); ?> </p>
+                <?php } ?>
             	<p>Published on <time datetime="<?php the_time('l, F jS, Y') ?>" pubdate><?php the_time('l, F jS, Y') ?></time></p>
             </footer>
 

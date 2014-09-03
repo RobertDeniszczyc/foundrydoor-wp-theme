@@ -536,7 +536,7 @@ header .nav__primary a:hover {
   overflow: hidden;
   background: #333; }
   .splash .splash__image {
-    max-width: 100%;
+    min-width: 100%;
     overflow: hidden;
     opacity: 0.7; }
 
