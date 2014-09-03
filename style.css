@@ -525,12 +525,6 @@ header .nav__primary a, header .nav__primary a:visited {
 header .nav__primary a:hover {
   color: #f0223a; }
 
-.banner-text {
-  display: inline-block; }
-  .banner-text a, .banner-text a:visited {
-    color: rgba(250, 250, 250, 0.7);
-    text-decoration: none; }
-
 .splash {
   width: auto;
   max-width: 100%;
@@ -610,9 +604,11 @@ nav ul {
   position: absolute;
   left: 0;
   display: inline-block;
-  margin: 0.5em 2em; }
-  .sitetitle li {
-    display: inline-block; }
+  margin: 0.5em 2em;
+  line-height: 30px; }
+  .sitetitle a, .sitetitle a:visited {
+    color: rgba(250, 250, 250, 0.7);
+    text-decoration: none; }
 
 @media (max-width: 900px) {
   .nav__primary li {

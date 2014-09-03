@@ -18,8 +18,10 @@ nav{
 	left: 0;
 	display: inline-block;
 	margin: 0.5em 2em;
-	li {
-	    display: inline-block;
+	line-height: 30px;
+	a, a:visited {
+        color: $ghost;
+        text-decoration: none;
 	}
 }
 

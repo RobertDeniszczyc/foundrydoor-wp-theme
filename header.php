@@ -43,7 +43,7 @@
 
 <body <?php body_class(); ?> id="top">
     <header role="banner">
-        <div class="banner-text sitetitle">
+        <div class="sitetitle">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></a>
             <!--<p class="desc">
                             <?php bloginfo( 'description' ); ?>
