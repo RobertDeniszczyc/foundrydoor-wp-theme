@@ -630,3 +630,6 @@ nav ul {
   .entry-meta p {
     font-style: italic;
     color: #777777; }
+
+.contentinfo {
+  margin: 4em auto 2em; }
