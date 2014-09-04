@@ -8,7 +8,7 @@ Font weights set as variables because sometimes there are multiple weights,
 so an example use might also be a variable of $mid-weight: 500;
 If you've just got normal and bold, you don't need the variable.
 */
-@import url('http://fonts.googleapis.com/css?family=Oswald');
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
 @import url('http://fonts.googleapis.com/css?family=Tinos:400,700');
 
 html {
