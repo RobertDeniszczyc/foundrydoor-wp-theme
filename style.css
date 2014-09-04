@@ -277,6 +277,9 @@ footer p {
 ::selection {
   background-color: rgba(50, 50, 50, 0.4); }
 
+.article__content p, .single-page p {
+  margin: 2rem 0rem 0.5rem; }
+
 /* media queries */
 @media (max-width: 960px) {
   .guest-name h1 {
