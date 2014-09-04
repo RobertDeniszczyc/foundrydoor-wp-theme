@@ -473,9 +473,6 @@ article {
   margin: 0 auto 0;
   overflow: hidden; }
 
-.entry-meta {
-  margin: 1em auto; }
-
 .article-archive {
   max-width: 1000px;
   margin: 0 auto 0; }
@@ -628,6 +625,8 @@ nav ul {
     .ul--archive li a {
       text-decoration: none; }
 
-.entry-meta p {
-  font-style: italic;
-  color: #777777; }
+.entry-meta {
+  margin: 3em auto 0em; }
+  .entry-meta p {
+    font-style: italic;
+    color: #777777; }
