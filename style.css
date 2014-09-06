@@ -453,15 +453,13 @@ footer, .comments {
 article {
   padding: 0; }
 
-.guest-content {
-  margin: 60px auto 1em; }
-  .guest-content blockquote {
-    max-width: 650px;
-    margin: 0 auto 0;
-    padding: 3em 5em 3em; }
-  .guest-content img {
-    width: auto;
-    height: auto; }
+.guest-content blockquote {
+  max-width: 650px;
+  margin: 0 auto 0;
+  padding: 3em 5em 3em; }
+.guest-content img {
+  width: auto;
+  height: auto; }
 
 .article__content {
   max-width: 650px;
