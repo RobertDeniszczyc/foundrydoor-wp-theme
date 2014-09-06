@@ -42,9 +42,6 @@
 </head>
 
 <body <?php body_class(); ?> id="top">
-    <div class="openings">
-        <p>Accepting post submissions! Get in touch!</p>
-    </div>
     <header role="banner">
         <div class="sitetitle">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></a>
