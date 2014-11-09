@@ -6,7 +6,7 @@ get_header(); ?>
 	<div class="single-page">	
 	<ul class="ul--archive">
 	<?php
-		$args = array( 'numberposts' => '5' );
+		$args = array( 'numberposts' => '10' );
 		$recent_posts = wp_get_recent_posts( $args );
 		foreach( $recent_posts as $recent ){
 			$post_title = $recent["post_title"];
